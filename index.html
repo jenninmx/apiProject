@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>IP Address News</title>
+<title></title>
 
 <h1>
 Your current IP address is: <?php echo $_SERVER["REMOTE_ADDR"]; ?>
@@ -10,6 +10,16 @@ Your current IP address is: <?php echo $_SERVER["REMOTE_ADDR"]; ?>
 </head>
 
 <body>
+
+<form>
+	<input type="text" name="ip" onchange="newIp()">
+	<button id="submit" type="button">Search Local News</button>
+	<br><br>
+</form>
+	Latitude: <p id="latitude"></p><br>
+	Longitude: <p id="longitude"></p>
+
+	<script src = "apiload.js"></script>
 </body>
 
 </html>
