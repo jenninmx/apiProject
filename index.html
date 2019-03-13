@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title></title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>IP to Map Location</title>
 
-<h1>
-Your current IP address is: <?php echo $_SERVER["REMOTE_ADDR"]; ?>
-</h1>
 </head>
-
-<body>
-
-<form>
-	<input type="text" name="ip" onchange="newIp()">
-	<button id="submit" type="button">Search Local News</button>
-	<br><br>
+<body background="http://all4desktop.com/data_images/original/4235938-cool-background.jpg">
+<div id="floating-panel">
+<b>Enter Valid IP Address Below</b>
+<form name="ipform">
+	<input type="text" name="ip" onchange="newIp()" id="ip" placeholder="0.0.0.0">
+	<button id="submit" type="button">Find on Map</button>
 </form>
-	Latitude: <p id="latitude"></p><br>
-	Longitude: <p id="longitude"></p>
+</div>
+<div id="map"></div>
+<div id="info-panel">
+	Latitude: <div id = "latitude"></p></div><br>
+	Longitude: <div id = "longitude"></p></div><br>
+	Country: <div id = "country"></p></div><br>
+	Region: <div id = "region"></p></div><br>
+	City: <div id = "city"></p></div><br>
+</div>
 
-	<script src = "apiload.js"></script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=<API KEY WILL BE HERE>&callback=initMap">
+</script>
+<script src = "apiload.js"></script>
 </body>
-
-</html>
