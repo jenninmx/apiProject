@@ -21,7 +21,7 @@
         var parseRequest = JSON.parse(httpRequest.responseText);
 		document.getElementById("latitude").innerHTML = parseRequest.latitude;
 		document.getElementById("longitude").innerHTML = parseRequest.longitude;
-		document.getElementById("country").innerHTML = parseRequest.county;
+		document.getElementById("country").innerHTML = parseRequest.country;
 		document.getElementById("region").innerHTML = parseRequest.region;
 		document.getElementById("city").innerHTML = parseRequest.city;
 		
