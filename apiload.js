@@ -54,8 +54,7 @@ function initMap() {
 
     marker = new google.maps.Marker({
                 map:map,
-                animation: google.maps.Animation.DROP,
-                position: {lat: 0,  lng:  0}
+                animation: google.maps.Animation.DROP
     });
 }
 
